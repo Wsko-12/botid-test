@@ -4,5 +4,5 @@ import {checkBotId} from "botid/server";
 export async function POST(request: NextRequest) {
     const verification = await checkBotId();
 
-    return NextResponse.json(verification)
+    return NextResponse.json(JSON.stringify(verification))
 }
